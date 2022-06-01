@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<link href="index.css" type="text/css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<meta charset="UTF-8">
+<meta property="og:title" content="Mongolian Energy App"/>
+<meta property="og:image" content="/"/>
+<meta name="keywords" content="masters, energy, app, decentralised, alexander, gibson">
+<meta name="description" content="Masters Project - Mongolian Energy App">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>Mongolian Energy App</title>
+</head>
+	
+<link rel="icon" href="images/favicon-01.ico">
+<link rel="apple-touch-icon" href="images/favicon-01.png">
+	
+<body class="body">
+	<div class="home">
+		<div class="topnavbar">
+			<div class="topnavbartext">
+				<h1>Your Energy</h1>
+				<h2 id="date"></h2>
+			</div>
+		<div style="display: flex; flex-direction: row; gap: 0px; justify-content: center; align-items: center;">
+			<a style="padding: 30px 20px 0px 0px;" href="createaccount.html" style="text-decoration: none;"><img style="width:33px" src="icons/accountgreycircle.png" alt="notification"></a>
+			<a style="padding: 30px 30px 0px 0px;" href="account.html" style="text-decoration: none;"><img style="width:35px" src="icons/Profile picture (unfilled).png" alt="notification"></a>
+		</div>
+		</div>
+		<div class="contentwrapper">
+			<div class="energycontentbox" style="background: #C0E1FF;">
+				<div class="energyinnerbox">
+					<div class="energytextbox">
+						<div class="energytext">
+							<h2>Solar Panel 1</h2>
+							<h3>Date Added: 23rd March 2022</h3>
+						</div>
+						<div class="removesource">
+							<img style="width:10px" src="icons/minus.png" alt="notification">
+							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px">Remove this electricity source</h3>
+						</div>
+					</div>
+				</div>
+				<div class="energyinfo">
+					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
+				</div>
+			</div>
+			<div class="energycontentbox" style="background: #B3C7EE;">
+				<div class="energyinnerbox">
+					<div class="energytextbox">
+						<div class="energytext">
+							<h2>Wind Turbine 1</h2>
+							<h3>Date Added: 23rd March 2022</h3>
+						</div>
+						<div class="removesource">
+							<img style="width:10px" src="icons/minus.png" alt="notification">
+							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px;">Remove this electricity source</h3>
+						</div>
+					</div>
+				</div>
+				<div class="energyinfo">
+					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
+				</div>
+			</div>
+			<div class="energycontentbox" style="background: #B6D8E2;">
+				<div class="energyinnerbox">
+					<div class="energytextbox">
+						<div class="energytext">
+							<h2>Portable Charger 1</h2>
+							<h3>Date Added: 23rd March 2022</h3>
+						</div>
+						<div class="removesource">
+							<img style="width:10px" src="icons/minus.png" alt="notification">
+							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px">Remove this electricity source</h3>
+						</div>
+					</div>
+				</div>
+				<div class="energyinfo">
+					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+			<a href="index.html" style="text-decoration: none;"><img style="height:30px" src="icons/homeicongrey.png" alt="home"></a>
+			<a href="predictions.html" style="text-decoration: none;"><img style="height:30px" src="icons/predictionicongrey.png" alt="prediction"></a>
+			<a href="map.html" style="text-decoration: none;"><img style="height:30px" src="icons/mapicongrey.png" alt="map"></a>
+			<a href="account.html" style="text-decoration: none;"><img style="height:35px" src="icons/accounticonblack.png" alt="account"></a>
+	</div>
+</div>
+
+<script>
+	var config = {
+  apiKey: "AIzaSyC7_Guj_AMNRueiIdp1EwLiCtkQWBtR0TY",
+  authDomain: "masters-e1a00.firebaseapp.com",
+  databaseURL: "https://masters-e1a00-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "masters-e1a00",
+  storageBucket: "masters-e1a00.appspot.com",
+  messagingSenderId: "930165107746",
+  appId: "1:930165107746:web:d9bb5d9c157d937dfd2e7b",
+  measurementId: "G-DF68ZCGVGX"
+};
+
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script src="index.js"></script>
+</body>
+</html>

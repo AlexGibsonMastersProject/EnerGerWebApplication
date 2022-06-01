@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<link href="index.css" type="text/css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<meta charset="UTF-8">
+<meta property="og:title" content="EnerGer"/>
+<meta property="og:image" content="/"/>
+<meta name="keywords" content="masters, energy, app, decentralised, alexander, gibson">
+<meta name="description" content="Masters Project - EnerGer">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>EnerGer</title>
+</head>
+	
+<link rel="icon" href="images/favicon-01.ico">
+<link rel="apple-touch-icon" href="images/favicon-01.png">
+	
+<body class="body">
+  <div class="backblob" style=" width: 50vw; height: 15vh;left: 20vw; top: 10vh; background: #DFEDDA; z-index: -10;"></div>
+  <div class="backblob" style=" width: 218px; height: 164px; left: 50vw; top: 30vh; background: #E4F2FB; z-index: -10;"></div>
+  <div class="backblob" style=" width: 50vw; height: 15vh;left: 20vw; top: 50vh; background: #DFEDDA; z-index: -10;"></div>
+  <div class="backblob" style=" width: 218px; height: 164px; left: 20vw; top: 70vh; background: #E4F2FB; z-index: -10;"></div>
+  <div class="accounthome">
+      <div class="accounttopnav">
+        <div class="accountnavtext">
+          <h1 id="accounttitle">Create an account</h1>
+        </div>
+        <div class="sliderbutton">
+          <div class="slider loginslider" id="loginslider">
+              <h3 style="padding: 0px;" id="loginslidertext">Log in</h3>
+          </div>
+          <div class="slider signupslider" id="signupslider" style="background-color: black;">
+            <h3 style="padding: 0px; color: white;" id="signupslidertext">Sign up</h3>
+          </div>
+        </div>
+      </div>
+      <div class="accountcontentwrapper" id="signupcontent">
+        <form class="signupform" id="signupform">
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Name of your energy group</h3>
+              <input type="search" class="forminput accountname" id="accountname" placeholder="Name of your energy group">
+            </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Password</h3>
+              <input type="search" class="forminput accountpassword" id="accountpassword" placeholder="Password">
+              </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Number of people in your energy group</h3>
+              <input type="search" class="forminput accountpeople" id="accountpeople" placeholder="Number of people in your energy group">
+            </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Amount you would like to spend on energy per year</h3>
+              <input type="search" class="forminput accountmoney" id="accountmoney" placeholder="£/year">
+            </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">What appliances does your energy group use?</h3>
+              <input type="search" class="forminput accountapp" id="accountapp" placeholder="Appliances">
+            </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Allow EnerGer to use your location?</h3>
+              <input type="search" class="forminput accountloc" id="accountloc" placeholder="Allow/Disallow">
+              </div>
+        </form>
+      </div>
+      <div class="accountcontentwrapper" id="logincontent" style="display: none">
+        <form class="loginform" id="loginform">
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Username</h3>
+              <input type="search" class="forminput accountname" id="accountname" placeholder="Username">
+            </div>
+            <div class="forminputwrapper">
+              <h3 style="padding-left: 20px;">Password</h3>
+              <input type="search" class="forminput accountpassword" id="accountpassword" placeholder="Password">
+            </div>
+        </form>
+      </div>
+      <div class="accountbottomnav">
+        <button type="submit" class="submitbutton" id="submitbutton">
+          <h3 id="accountbutton" style="color: white; padding: 0px;">Sign up</h3>
+          <img style="width:15px" src="icons/gowhite.png" alt="notification">
+        </button>
+        <h3 id="nowlogintext" style="margin: 20px 0px 0px 55px; display: none;">Now log in with your details</h3>
+      </div>
+  </div>
+<script>
+	var config = {
+  apiKey: "AIzaSyC7_Guj_AMNRueiIdp1EwLiCtkQWBtR0TY",
+  authDomain: "masters-e1a00.firebaseapp.com",
+  databaseURL: "https://masters-e1a00-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "masters-e1a00",
+  storageBucket: "masters-e1a00.appspot.com",
+  messagingSenderId: "930165107746",
+  appId: "1:930165107746:web:d9bb5d9c157d937dfd2e7b",
+  measurementId: "G-DF68ZCGVGX"
+};
+
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script src="signupform.js"></script>
+</body>
+</html>

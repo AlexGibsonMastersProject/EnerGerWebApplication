@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<link href="index.css" type="text/css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+<meta charset="UTF-8">
+<meta property="og:title" content="EnerGer"/>
+<meta property="og:image" content="/"/>
+<meta name="keywords" content="masters, energy, app, decentralised, alexander, gibson">
+<meta name="description" content="Masters Project - EnerGer">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>EnerGer</title>
+</head>
+	
+<link rel="icon" href="images/favicon-01.ico">
+<link rel="apple-touch-icon" href="images/favicon-01.png">
+	
+<body class="body">
+	<div class="home">
+		<div class="topnavbar">
+			<div class="topnavbartext">
+				<h1>Home</h1>
+				<h2 id="date"></h2>
+			</div>
+		<a style="padding: 30px 30px 0px 0px; text-decoration: none;" href="/account.html"><img style="width:35px" src="icons/Profile picture (unfilled).png" alt="notification"></a>
+		</div>
+		<div class="contentwrapper">
+			<div class="contentbox">
+				<div class="subcard" style="border-radius: 100px; align-items: center; padding: 10px;">
+					<div class="subcardtext">
+						<h3 style="padding: 0px 0px 0px 10px;" id="hometime"></h3>
+					</div>
+					<div class="sliderbutton" style="margin: 0px;">
+						<div class="slider heatingslider" id="heatingslider" style="background-color: black;">
+							<h3 style="padding: 0px; color: white;" id="heatingslidertext">Heating</h3>
+						</div>
+						<div class="slider electricityslider" id="electricityslider">
+						  <h3 style="padding: 0px;" id="electricityslidertext">Electricity</h3>
+						</div>
+					</div>
+				</div>
+				<div class="actualcontent">
+					<div id="heatinggraph" style="padding-top: 70px; display: block;">
+						<canvas id="heating"></canvas>
+					</div>
+				</div>
+				<div class="actualcontent">
+					<div id="electricitygraph" style="padding-top: 70px; display: none;">
+						<canvas id="electricity"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="contentbox" style="padding: 0px;overflow: hidden; height: 40vw">
+				<div class="subcard" style="margin: 20px">
+					<img style="width:15px" src="icons/locationicon.png" alt="notification">
+					<div class="subcardtext">
+						<h3>Töv</h3>
+						<h3>Central Energy System</h3>
+					</div>
+				</div>
+				<img style="width: 100%;" src="images/map.png" alt="map">
+			</div>
+			<div class="contentbox" style="width: 40%; height: 125px; background: linear-gradient(131.37deg, #C0E1FF 0%, #F2F9FF 101.45%); border-radius: 20px;">
+				<div class="subcard">
+					<img style="width:15px" src="icons/weathericon.png" alt="notification">
+					<div class="subcardtext">
+						<h3>-25°C</h3>
+						<h3>Clear Skies</h3>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="navbar">
+			<a href="index.html" style="text-decoration: none;"><img style="height:35px" src="icons/homeiconblack.png" alt="home"></a>
+			<a href="predictions.html" style="text-decoration: none;"><img style="height:30px" src="icons/predictionicongrey.png" alt="predictions"></a>
+			<a href="map.html" style="text-decoration: none;"><img style="height:30px" src="icons/mapicongrey.png" alt="map"></a>
+			<a href="account.html" style="text-decoration: none;"><img style="height:30px" src="icons/accounticongrey.png" alt="account"></a>
+	</div>
+</div>
+<script>
+	var config = {
+  apiKey: "AIzaSyC7_Guj_AMNRueiIdp1EwLiCtkQWBtR0TY",
+  authDomain: "masters-e1a00.firebaseapp.com",
+  databaseURL: "https://masters-e1a00-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "masters-e1a00",
+  storageBucket: "masters-e1a00.appspot.com",
+  messagingSenderId: "930165107746",
+  appId: "1:930165107746:web:d9bb5d9c157d937dfd2e7b",
+  measurementId: "G-DF68ZCGVGX"
+};
+
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script src="index.js"></script>
+<script src="graph.js"></script>
+</body>
+</html>

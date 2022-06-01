@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<link href="index.css" type="text/css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+<meta charset="UTF-8">
+<meta property="og:title" content="EnerGer"/>
+<meta property="og:image" content="/"/>
+<meta name="keywords" content="masters, energy, app, decentralised, alexander, gibson">
+<meta name="description" content="Masters Project - EnerGer">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>EnerGer</title>
+</head>
+	
+<link rel="icon" href="images/favicon-01.ico">
+<link rel="apple-touch-icon" href="images/favicon-01.png">
+	
+<body class="body">
+	<div class="home">
+	<div class="topnavbar">
+			<div class="topnavbartext">
+				<h1>Form</h1>
+				<h2 id="date"></h2>
+			</div>
+		</div>
+	<div class="contentwrapper">
+		<section id="form" class="section">
+			<div id="inputForm">
+				<div class="energycontentbox" style="background: #B3C7EE;">
+					<div class="energyinnerbox">
+						<div class="energytextbox">
+							<div class="energytext">
+								<div class="forminputbox">
+									<label class="h2" for="formenergytype">Energy Type</label>
+									<input class="h2" type="text" id="formenergytype" name="energytype" placeholder="Energy Type">
+								</div>
+								<div class="forminputbox">
+									<label class="h2" for="formenergyamount">Energy Amount</label>
+									<input class="h2" type="text" id="formenergyamount" name="energyamount" placeholder="Energy Amount">
+								</div>
+								<div class="forminputbox">
+									<label class="h2" for="formenergytime">Time Frame</label>
+									<input class="h2" type="text" id="formenergytime" name="energytime" placeholder="Time Frame">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="energyinfo">
+						<div class="predpara">
+							<h2 style="line-height:0px; padding:20px 0px 20px 0px">Parameters</h2>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formeledem">Electricity Demand</label>
+									<input class="h3" type="text" id="formeledem" name="eledem" placeholder="Electricity Demand">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formheadem">Heating Demand</label>
+									<input class="h3" type="text" id="formheadem" name="headem" placeholder="Heating Demand">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formclurad">Cluster Radius</label>
+									<input class="h3" type="text" id="formclurad" name="clurad" placeholder="Cluster Radius">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formavcale">Available Cabling Length</label>
+									<input class="h3" type="text" id="formavcale" name="avcale" placeholder="Available Cabling Length">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formpvcapa">PV Capacity</label>
+									<input class="h3" type="text" id="formpvcapa" name="pvcapa" placeholder="PV Capacity">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formwincap">Wind Capacity</label>
+									<input class="h3" type="text" id="formwincap" name="wincap" placeholder="Wind Capacity">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formelheca">Electric Heater Capacity</label>
+									<input class="h3" type="text" id="formelheca" name="elheca" placeholder="Electric Heater Capacity">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formbatcap">Battery Capacity</label>
+									<input class="h3" type="text" id="formbatcap" name="batcap" placeholder="Battery Capacity">
+								</div>
+							</div>
+							<div class="indipara">
+								<div class="forminputbox">
+									<label class="h3" for="formensyma">Energy System Mass</label>
+									<input class="h3" type="text" id="formensyma" name="ensyma" placeholder="Energy System Mass">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+	</div>
+</div>
+<script>
+	var config = {
+  apiKey: "AIzaSyC7_Guj_AMNRueiIdp1EwLiCtkQWBtR0TY",
+  authDomain: "masters-e1a00.firebaseapp.com",
+  databaseURL: "https://masters-e1a00-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "masters-e1a00",
+  storageBucket: "masters-e1a00.appspot.com",
+  messagingSenderId: "930165107746",
+  appId: "1:930165107746:web:d9bb5d9c157d937dfd2e7b",
+  measurementId: "G-DF68ZCGVGX"
+};
+
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script src="index.js"></script>
+</body>
+</html>
