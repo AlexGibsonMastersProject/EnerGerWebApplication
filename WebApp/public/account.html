@@ -21,24 +21,27 @@
 		<div class="topnavbar">
 			<div class="topnavbartext">
 				<h1>Your Energy</h1>
-				<h2 id="date"></h2>
+				<h2 id="date"></h2>	
+				<a id="addbutton" class="addbutton" style="position: absolute; right: 36px; top: 80px;" href="createaccount.html" style="text-decoration: none;"><img style="width:25px" src="icons/add.png" alt="notification"></a>
 			</div>
-		<div style="display: flex; flex-direction: row; gap: 0px; justify-content: center; align-items: center;">
-			<a style="padding: 30px 20px 0px 0px;" href="createaccount.html" style="text-decoration: none;"><img style="width:33px" src="icons/accountgreycircle.png" alt="notification"></a>
-			<a style="padding: 30px 30px 0px 0px;" href="account.html" style="text-decoration: none;"><img style="width:35px" src="icons/Profile picture (unfilled).png" alt="notification"></a>
-		</div>
+			<div style="display: flex; flex-direction: row; gap: 0px; justify-content: center; align-items: center;">
+				<a style="padding: 30px 20px 0px 0px;" href="createaccount.html" style="text-decoration: none;"><img style="width:33px" src="icons/accountgreycircle.png" alt="notification"></a>
+				<a style="padding: 30px 30px 0px 0px;" href="account.html" style="text-decoration: none;"><img style="width:35px" src="icons/Profile picture (unfilled).png" alt="notification"></a>
+			</div>
 		</div>
 		<div class="contentwrapper">
-			<div class="energycontentbox" style="background: #C0E1FF;">
+			<h2>Number of Energy Sources: <span id="documenttest"></span></h2>
+			<h2>Document IDs: <span id="documentidtest"></span></h2>
+			<div id="energysource1" class="energycontentbox" style="background: #C0E1FF; display: none;">
 				<div class="energyinnerbox">
 					<div class="energytextbox">
 						<div class="energytext">
-							<h2>Solar Panel 1</h2>
+							<h2>Energy Source 1</h2>
 							<h3>Date Added: 23rd March 2022</h3>
 						</div>
-						<div class="removesource">
+						<div id="removesource1" class="removesource removesource1">
 							<img style="width:10px" src="icons/minus.png" alt="notification">
-							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px">Remove this electricity source</h3>
+							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px;">Remove this electricity source</h3>
 						</div>
 					</div>
 				</div>
@@ -46,11 +49,11 @@
 					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
 				</div>
 			</div>
-			<div class="energycontentbox" style="background: #B3C7EE;">
+			<div id="energysource2" class="energycontentbox" style="background: #B3C7EE; display: none;">
 				<div class="energyinnerbox">
 					<div class="energytextbox">
 						<div class="energytext">
-							<h2>Wind Turbine 1</h2>
+							<h2>Energy Source 2</h2>
 							<h3>Date Added: 23rd March 2022</h3>
 						</div>
 						<div class="removesource">
@@ -63,22 +66,33 @@
 					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
 				</div>
 			</div>
-			<div class="energycontentbox" style="background: #B6D8E2;">
+			<div id="energysource3" class="energycontentbox" style="background: #B3C7EE; display: none;">
 				<div class="energyinnerbox">
 					<div class="energytextbox">
 						<div class="energytext">
-							<h2>Portable Charger 1</h2>
+							<h2>Energy Source 3</h2>
 							<h3>Date Added: 23rd March 2022</h3>
 						</div>
 						<div class="removesource">
 							<img style="width:10px" src="icons/minus.png" alt="notification">
-							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px">Remove this electricity source</h3>
+							<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px;">Remove this electricity source</h3>
 						</div>
 					</div>
 				</div>
 				<div class="energyinfo">
 					<h3 style="line-height:0px; padding:10px 0px 10px 0px">Information</h3>
 				</div>
+			</div>
+			<div id="addsourcebox" class="energycontentbox" style="background: lightgray;display: flex; width:fit-content; display: none;">
+						<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+							<input type="search" class="forminput energysourceinput" style="font-size: 24px;" id="energysourceinput" placeholder="Type of Energy Source">
+							<img id="closebutton" class="closebutton" style="width: 30px; margin: 5px 5px 0px 20px;" src="icons/xblack.png" alt="notification">
+						</div>
+				<button type="submit" class="submitbutton addsourcebutton" id="addsourcebutton" style="padding-left: 15px; margin: 0px;">
+					<img style="width:12px" src="icons/addwhite.png" alt="notification">
+					<h3 id="addsourcebuttontext" style="color: white; padding: 0px;">Add Source</h3>
+					<img style="width:15px" src="icons/gowhite.png" alt="notification">
+				</button>
 			</div>
 		</div>
 		<div class="navbar">
@@ -107,5 +121,6 @@ db.settings({ timestampsInSnapshots: true });
 
 </script>
 <script src="index.js"></script>
+<script src="yourenergy.js"></script>
 </body>
 </html>

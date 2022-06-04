@@ -20,95 +20,97 @@
 	<div class="home">
 	<div class="topnavbar">
 			<div class="topnavbartext">
-				<h1>Form</h1>
+				<h1>Input Parameter Form</h1>
 				<h2 id="date"></h2>
 			</div>
 		</div>
 	<div class="contentwrapper">
-		<section id="form" class="section">
-			<div id="inputForm">
-				<div class="energycontentbox" style="background: #B3C7EE;">
-					<div class="energyinnerbox">
-						<div class="energytextbox">
-							<div class="energytext">
-								<div class="forminputbox">
-									<label class="h2" for="formenergytype">Energy Type</label>
-									<input class="h2" type="text" id="formenergytype" name="energytype" placeholder="Energy Type">
-								</div>
-								<div class="forminputbox">
-									<label class="h2" for="formenergyamount">Energy Amount</label>
-									<input class="h2" type="text" id="formenergyamount" name="energyamount" placeholder="Energy Amount">
-								</div>
-								<div class="forminputbox">
-									<label class="h2" for="formenergytime">Time Frame</label>
-									<input class="h2" type="text" id="formenergytime" name="energytime" placeholder="Time Frame">
-								</div>
+		<form id="paramForm">
+			<div class="energycontentbox" style="background: #B3C7EE;">
+				<div class="energyinnerbox">
+					<div class="energytextbox">
+						<div class="energytext">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h2 style="padding: 10px 0px 0px 0px; margin: 0px 40px 20px 0px;">Energy Type</h2>
+								<input type="search" class="forminput energytypeinput" id="energytypeinput" placeholder="Energy Type">
 							</div>
-						</div>
-					</div>
-					<div class="energyinfo">
-						<div class="predpara">
-							<h2 style="line-height:0px; padding:20px 0px 20px 0px">Parameters</h2>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formeledem">Electricity Demand</label>
-									<input class="h3" type="text" id="formeledem" name="eledem" placeholder="Electricity Demand">
-								</div>
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h2 style="padding: 10px 0px 0px 0px; margin: 0px 40px 20px 0px">Energy Amount</h2>
+								<input type="search" class="forminput energyamountinput" id="energyamountinput" placeholder="Energy Amount">
 							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formheadem">Heating Demand</label>
-									<input class="h3" type="text" id="formheadem" name="headem" placeholder="Heating Demand">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formclurad">Cluster Radius</label>
-									<input class="h3" type="text" id="formclurad" name="clurad" placeholder="Cluster Radius">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formavcale">Available Cabling Length</label>
-									<input class="h3" type="text" id="formavcale" name="avcale" placeholder="Available Cabling Length">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formpvcapa">PV Capacity</label>
-									<input class="h3" type="text" id="formpvcapa" name="pvcapa" placeholder="PV Capacity">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formwincap">Wind Capacity</label>
-									<input class="h3" type="text" id="formwincap" name="wincap" placeholder="Wind Capacity">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formelheca">Electric Heater Capacity</label>
-									<input class="h3" type="text" id="formelheca" name="elheca" placeholder="Electric Heater Capacity">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formbatcap">Battery Capacity</label>
-									<input class="h3" type="text" id="formbatcap" name="batcap" placeholder="Battery Capacity">
-								</div>
-							</div>
-							<div class="indipara">
-								<div class="forminputbox">
-									<label class="h3" for="formensyma">Energy System Mass</label>
-									<input class="h3" type="text" id="formensyma" name="ensyma" placeholder="Energy System Mass">
-								</div>
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h2 style="padding: 10px 0px 0px 0px; margin: 0px 40px 0px 0px">Time Frame</h2>
+								<input type="search" class="forminput timeframeinput" id="timeframeinput" placeholder="Time Frame">
 							</div>
 						</div>
 					</div>
 				</div>
-		</section>
+				<div class="energyinfo">
+					<div class="predpara">
+						<h2 style="line-height:0px; padding:20px 0px 20px 0px">Parameters</h2>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Electricity Demand</h3>
+								<input type="search" class="forminput eledeminput" id="eledeminput" placeholder="Electricity Demand">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Heating Demand</h3>
+								<input type="search" class="forminput heademinput" id="heademinput" placeholder="Heating Demand">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Cluster Radius</h3>
+								<input type="search" class="forminput cluradinput" id="cluradinput" placeholder="Cluster Radius">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Available Cabling Length</h3>
+								<input type="search" class="forminput avcaleinput" id="avcaleinput" placeholder="Available Cabling Length">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">PV Capacity</h3>
+								<input type="search" class="forminput pvcapainput" id="pvcapainput" placeholder="PV Capacity">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Wind Capacity</h3>
+								<input type="search" class="forminput wincapinput" id="wincapinput" placeholder="PV Capacity">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Electric Heater Capacity</h3>
+								<input type="search" class="forminput elhecainput" id="elhecainput" placeholder="Electric Heater Capacity">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Battery Capacity</h3>
+								<input type="search" class="forminput batcapinput" id="batcapinput" placeholder="Battery Capacity">
+							</div>
+						</div>
+						<div class="indipara">
+							<div class="forminputwrapper" style="margin: 0px; display: flex; flex-direction: row; justify-content:space-between; width: 100%;">
+								<h3 style="padding: 10px 0px 0px 0px">Energy System Mass</h3>
+								<input type="search" class="forminput ensymainput" id="ensymainput" placeholder="Energy System Mass">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="submitbutton submitform" id="submitform" style="margin:20px 0px 0px 20px;">
+				<h3 id="accountbutton" style="color: white; padding: 0px;">Submit</h3>
+				<img style="width:15px" src="icons/gowhite.png" alt="notification">
+			</button>
+		</form>
 	</div>
-</div>
 <script>
 	var config = {
   apiKey: "AIzaSyC7_Guj_AMNRueiIdp1EwLiCtkQWBtR0TY",
@@ -126,6 +128,7 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 </script>
+<script src="form.js"></script
 <script src="index.js"></script>
 </body>
 </html>

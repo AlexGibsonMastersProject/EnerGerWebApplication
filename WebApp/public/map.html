@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 <title>Mongolian Energy App</title>
 </head>
-	
+
 <link rel="icon" href="images/favicon-01.ico">
 <link rel="apple-touch-icon" href="images/favicon-01.png">
 	
@@ -25,10 +25,34 @@
 			</div>
 		<a style="padding: 30px 30px 0px 0px;" href="account.html" style="text-decoration: none;"><img style="width:35px" src="icons/Profile picture (unfilled).png" alt="notification"></a>
 		</div>
-		<div class="contentwrapper">
-			<div class="map">
-				<img style="width:100%" src="images/bigmap.png" alt="map">
-				
+		<div class="contentwrapper" style="margin-bottom:0px;">
+			<div class="map" style="height:calc(100vh - 400px); display: flex; justify-content: center; align-items: center;">
+				<img style="display: block; margin: auto; width: 100%;" src="images/bigmap.png" alt="map">
+				<a style="position: absolute; top: 400px; left: 50%; z-index: 10;" href=""><img style="width:35px" src="icons/maplocationred.png" alt="map"></a>
+				<a class="nearbygerloc" style="position: absolute; top: 300px; left: 30%; z-index: 20;" id="nearbygerloc" href=""><img style="width:30px; display: block" src="icons/maplocationgrey.png" alt="map"></a>
+				<a class="nearbyenergyloc" style="position: absolute; top: 500px; left: 70%; z-index: 20; display: none" id="nearbyenergyloc" href=""><img style="width:30px;" src="icons/maplocationgrey.png" alt="map"></a>
+				<div class="subcard" style="border-radius: 100px; align-items: center; padding: 10px; position: absolute; bottom: 150px; z-index: 100;">
+					<div class="sliderbutton" style="margin: 0px;">
+						<div class="slider nearbygerslider" id="nearbygerslider" style="background-color: black;">
+							<h3 style="padding: 0px; color: white;" id="nearbygerslidertext">Nearby Gers</h3>
+						</div>
+						<div class="slider enerinfraslider" id="enerinfraslider">
+						  <h3 style="padding: 0px;" id="enerinfraslidertext">Nearby Energy Infrastructure</h3>
+						</div>
+					</div>
+				</div>
+				<div class="subcard" id="nearbygercard" style="z-index: 100; border-radius: 20px; padding:10px; display: none; position: absolute; top: 295px; left:calc(30% + 40px); background: rgba(255,255,255,0.6);-webkit-backdrop-filter: blur(30px);backdrop-filter:blur(30px);-webkit-transform: translateY(0);transform:translateY(0);">
+					<div class="subcardtext"style="margin: 5px 0px 0px 5px;">
+						<h3 style="padding-bottom: 0px;">Tribe 1</h3>
+						<h3 style="color: darkgrey">15.2 km away</h3>
+					</div>
+					<div id="seeenergysources" class="removesource seeenergysources" style="margin: 0px;">
+						<img style="width:10px" src="/icons/Electricity Icon white.png" alt="notification">
+						<h3 style="color: #FFFFFF; line-height:0px; padding:10px 0px 10px 0px">See Energy Sources</h3>
+						<img style="width: 20px" src="/icons/dropdownwhite.png" alt="notification">
+					</div>
+					<h3 id="energysource1" style="display: none; border-radius: 20px; background: #C0E1FF; color: #000000; line-height:0px; padding: 15px 10px 15px 10px; margin: 10px 0px 0px 0px;">Wind Turbine</h3>
+				</div>
 			</div>
 		</div>
 		<div class="navbar">
@@ -55,6 +79,7 @@ const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 </script>
+<script src="map.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
