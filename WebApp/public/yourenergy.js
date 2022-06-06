@@ -67,12 +67,10 @@ addsource.addEventListener('click', (e) => {
     db.collection('energysourcetab').get().then(snap => {
         db.collection("energysourcetab").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                lastid = doc.id,
-                document.getElementById("documentidtest").innerHTML = lastid;
+                lastid = doc.id;
         })});
     size = snap.size,
-    lastidextra = lastid + 1
-        db.collection('energysourcetab').doc((lastidextra).toString()).set({
+        db.collection('energysourcetab').doc((size+1).toString()).set({
             energySource: energysource.value, 
         }).then(() => {
             document.getElementById("addsourcebutton").style.backgroundColor = "#2C423C",

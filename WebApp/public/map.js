@@ -11,6 +11,7 @@ nearbygerslider.addEventListener('click', (e) => {
     document.getElementById("enerinfraslidertext").style.color = "black";
     document.getElementById("nearbygerloc").style.display = "block";
     document.getElementById("nearbyenergyloc").style.display = "none";
+    document.getElementById("nearbyenerinfracard").style.display = "none";
 });
 
 enerinfraslider.addEventListener('click', (e) => {
@@ -35,3 +36,14 @@ seeenergysources.addEventListener('click', (e) => {
     e.preventDefault();
     document.getElementById("energysource1").style.display = "block";
 });
+
+nearbyenergyloc.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById("nearbyenerinfracard").style.display = "block";
+});
+
+seeenergysources.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById("energysource1").style.display = "block";
+});
+
