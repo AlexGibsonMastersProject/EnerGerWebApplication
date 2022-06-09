@@ -1,5 +1,4 @@
-
-
+const energysource1 = db.collection('energysourcetab').limit(1)
 const addsource = document.querySelector(".addsourcebutton");
 const energysource = document.querySelector(".energysourceinput");
 const addbutton = document.querySelector(".addbutton");
@@ -71,11 +70,12 @@ addsource.addEventListener('click', (e) => {
         })});
     size = snap.size,
         db.collection('energysourcetab').doc((size+1).toString()).set({
-            energySource: energysource.value, 
+            energySource: energysource.value,
         }).then(() => {
             document.getElementById("addsourcebutton").style.backgroundColor = "#2C423C",
             document.getElementById("addsourcebuttontext").innerHTML = "Success",
-            document.getElementById('addsourcebox').style.display = "none";
+            document.getElementById('addsourcebox').style.display = "none",
+            document.getElementById("energysourcetext1").innerHTML = energysource1;
         })
 })});
 
